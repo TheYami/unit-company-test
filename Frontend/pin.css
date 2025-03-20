@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 0.5rem;
+}
+
+.top-section {
+    background-color: #F5F5F5;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.top-section .back-button-box {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    padding: 1rem 2rem 0 2rem;
+}
+
+.top-section .back-button-box i {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.top-section .back-button-box i:hover {
+    transform: scale(1.1);
+}
+
+.top-section .logo-box {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 3rem;
+}
+
+.top-section .logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top-section h2 {
+    margin-bottom: 2rem;
+}
+
+.top-section .pin-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 2rem;
+}
+
+.top-section .pin-box .pin {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #D7D7E1;
+}
+
+.top-section .forget-pin-box {
+    display: flex;
+    gap: 8px;
+    color: #9297A3;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bottom-section {
+    background-color: #fff;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.keypad {
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.key {
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    color: #019B33;
+}
+
+.key:hover {
+    transform: scale(1.1);
+}
+
+.key:active {
+    background: #019B33;
+    color: #fff;
+}
+
+.key.empty {
+    visibility: hidden;
+}
+
+.key.delete {
+    color: #019B33;
+}
+
+.key.delete img {
+    width: 24px;
+    height: 24px;
+}
+
+.pin-box .pin.filled {
+    background-color: #FF732D;
+}
+
+@media screen and (max-width: 640px) {
+    .top-section {
+        padding-top: 1rem;
+    }
+
+    .keypad {
+        width: 100%;
+        padding: 10px;
+    }
+}

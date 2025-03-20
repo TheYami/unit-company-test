@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FAFAFA;
+    padding: 3rem 2rem 0 2rem;
+}
+
+.header-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container .header-box .header-text {
+    display: flex;
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.back-button-box {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.back-button-box:hover {
+    transform: scale(1.1);
+}
+
+.header-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tel-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.tel-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 23rem;
+}
+
+.input-box {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #8E8E8E;
+}
+
+.input-box input {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 8px;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-box input::placeholder {
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+.terms-of-service {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.terms-of-service p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #8E8E8E;
+}
+
+.terms-of-service p span {
+    color: #000;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.terms-of-service button {
+    width: 100%;
+    padding: 0.75rem 0;
+    border-radius: 50px;
+    border: 5px solid #FFF;
+    background: linear-gradient(to right, #e6e6e6, #Faf8f8);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.terms-of-service button:hover {
+    transform: scale(1.1);
+}
+
+.terms-of-service button span {
+    background-color: #FFF;
+    border: 2px solid #8CD94F;
+    border-radius: 50%;
+    padding: 0.125rem 0.125rem 0.125rem 0.35rem;
+    margin-right: 0.5rem;
+    place-content: center;
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        padding: 3rem 1.5rem;
+    }
+
+    .container .header-box .header-text {
+        font-size: 12px;
+    }
+
+    .tel-box {
+        margin-top: 2rem;
+    }
+
+    .tel-box form {
+        gap: 18rem;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+
+    .terms-of-service {
+        width: 100%;
+    }
+}

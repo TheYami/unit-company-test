@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="numbers">8 9 1 7 3 0 2 5 4 6</h1>
+
+    <script>
+        // ทำการเข้าถึง element ที่มี id ชื่อ numbers ซึ่งจะเก็บ element ที่มี tag ชื่อ h1 ที่มี text คือ 8 9 1 7 3 0 2 5 4 6
+        const numbersElement = document.getElementById('numbers');
+
+        // ทำการเข้าถึง text ที่อยู่ใน element ที่มี id ชื่อ numbers ซึ่งจะเป็น text คือ 8 9 1 7 3 0 2 5 4 6
+        const numbersText = numbersElement.textContent;
+
+        // ทำการแบ่ง text ที่อยู่ใน element ที่มี id ชื่อ numbers ออกเป็น array โดยใช้เว้นวรรคเป็นตัวแบ่ง 
+        // ซึ่งจะได้ array ที่มี element คือ 8, 9, 1, 7, 3, 0, 2, 5, 4, 6
+        const numbersArray = numbersText.split(' ');
+
+        // ทำการเรียงลำดับตัวเลขใน array ที่มี element คือ 8, 9, 1, 7, 3, 0, 2, 5, 4, 6 จากน้อยไปมาก
+        //เปรียบเทียบ 8 กับ 9: 8 - 9 = -1 (ไม่สลับที่)
+        // เปรียบเทียบ 9 กับ 1: 9 - 1 = 8 (สลับที่, array กลายเป็น [8, 1, 9, 7, 3, 0, 2, 5, 4, 6])
+        const sortedNumbersArray = numbersArray.sort((a, b) => a - b);
+
+        // ทำการแสดงตัวเลขที่เรียงลำดับแล้วใน element ที่มี id ชื่อ numbers 
+        // โดยใช้ join ในการเชื่อมตัวเลขใน array ด้วยช่องว่าง
+        numbersElement.textContent = sortedNumbersArray.join(' ');
+
+    </script>
+</body>
+</html>
